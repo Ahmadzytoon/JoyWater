@@ -4,10 +4,10 @@
 @endsection
 @section('css')
 <!-- Customized Bootstrap Stylesheet -->
-<link href="UserSide/cssBook/bootstrap.min.css" rel="stylesheet">
+<link href="/UserSide/cssBook/bootstrap.min.css" rel="stylesheet">
 
 <!-- Template Stylesheet -->
-<link href="UserSide/cssBook/style.css" rel="stylesheet">
+<link href="/UserSide/cssBook/style.css" rel="stylesheet">
 @endsection
 
 {{--============= showCase ===============--}}
@@ -39,41 +39,81 @@
 
 <section class="book" id="book">
 
-    {{-- <h1 class="heading">
-        <span>b</span>
-        <span>o</span>
-        <span>o</span>
-        <span>k</span>
-        <span class="space"></span>
-        <span>n</span>
-        <span>o</span>
-        <span>w</span>
-    </h1> --}}
 
     <div class="row">
 
         <div class="image">
-            <img src="images/Waterscooter.gif" alt="">
+            {{-- url(../images/rejester.jpg)
+            {{URL::asset("images/Waterscooter.gif")}} --}}
+            <img src="{{URL::asset("images/Waterscooter.gif")}}" alt="">
         </div>
 
-        <form action="">
+        <form action="{{route('user.book.create',$data->id)}}" method="POST">
+            @method('GET')
+            @csrf
+
             <div class="inputBox">
-                <h3>where to</h3>
-                <input type="text" placeholder="place name">
+                <h3>First Name</h3>
+                <input type="text" class="form-control bg-transparent" id="name" placeholder="First Name" name="first_name" value="{{ old('first_name')}}" class="@error('first_name') is-invalid @enderror">
+                <input type="hidden" class="form-control bg-transparent" id="name" placeholder="First Name" name="user_id" value="{{ Auth::user()->id }}">
+                @error('first_name')
+                <div class="alert alert-danger">{{ $message }}</div>
+               @enderror
             </div>
             <div class="inputBox">
-                <h3>how many</h3>
-                <input type="number" placeholder="number of guests">
+
+
+                <h3>Last Name</h3>
+                <input type="text" class="form-control bg-transparent" id="name" placeholder="Last Name" name="last_name" value="{{ old('last_name')}}" class="@error('last_name') is-invalid @enderror">
+                @error('last_name')
+                <div class="alert alert-danger">{{ $message }}</div>
+                @enderror
+
             </div>
             <div class="inputBox">
-                <h3>arrivals</h3>
-                <input type="date">
+
+
+                <h3>Phone Number</h3>
+                <input type="text" class="form-control bg-transparent" id="name" placeholder="Phone Number" name="phoneNumber" value="{{ old('phoneNumber')}}" class="@error('phoneNumber') is-invalid @enderror">
+                @error('phoneNumber')
+                <div class="alert alert-danger">{{ $message }}</div>
+               @enderror
+
             </div>
             <div class="inputBox">
-                <h3>leaving</h3>
-                <input type="date">
+
+
+                <h3>Number of guest</h3>
+                <input type="number" class="form-control bg-transparent" id="name" placeholder="Guest Number" min="1" value="1" name="guest_number">
+
+
+
             </div>
-            <input type="submit" class="btn" value="book now">
+            <div class="inputBox">
+
+
+                <h3>Your Email</h3>
+                <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email" name="email" value="{{ old('email')}}" class="@error('email') is-invalid @enderror">
+                @error('email')
+                <div class="alert alert-danger">{{ $message }}</div>
+               @enderror
+
+
+                
+            </div>
+            <div class="inputBox">
+
+
+                <h3>Date</h3>
+                <input type="date" class="form-control bg-transparent datetimepicker-input" id="datetime" placeholder="Date" data-target="#date3" data-toggle="datetimepicker" name="res_date" value="{{ old('res_date')}}" class="@error('res_date') is-invalid @enderror" />
+                @error('res_date')
+                <div class="alert alert-danger">{{ $message }}</div>
+               @enderror
+
+
+                
+            </div>
+            <input type="submit" class="btn btn-outline-light w-100 py-3" value="Book Now">
         </form>
 
     </div>
@@ -84,3 +124,5 @@
 <!-- contact section ends -->
 
 @endsection
+
+
