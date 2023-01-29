@@ -109,7 +109,7 @@ Route::prefix('user')->name('user.')->group(function () {
     Route::get('/login/destroy',[LoginUserController::class,'destroy'])->name('login.destroy');
     
     Route::resource('/profile',ProfileUserController::class);
-    Route::resource('/profile/edit',ProfileUserController::class);
+    // Route::resource('/profile/edit',ProfileUserController::class);
 
     
     Route::get('/search',[Search::class , 'search']);
