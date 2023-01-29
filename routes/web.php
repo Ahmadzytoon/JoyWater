@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Search;
 use App\Http\Controllers\User\ActivityDetailsController;
+use App\Http\Controllers\User\MyreservatController;
 use App\Http\Controllers\User\BookController;
 use App\Http\Controllers\User\RegisterUserController;
 use App\Http\Controllers\User\LoginUserController;
@@ -13,8 +14,9 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ActivityController;
 use App\Http\Controllers\Admin\ReservationController;
-
 use App\Http\Controllers\ContactUsFormController;
+use App\Http\Controllers\User\MyreservController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -46,7 +48,7 @@ Route::resource('/users',UserController::class);
 Route::resource('/activity',ActivityController::class);
 Route::resource('/reservation',ReservationController::class);
 });
-Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('contact.createForm');
+Route::get('/contact',[ContactUsFormController::class,'createForm'])->name('contact.createForm');
 
 Route::get('/contact/store',[ContactUsFormController::class,'ContactUsForm'])->name('contact.store');
 require __DIR__.'/auth.php';
@@ -61,9 +63,7 @@ require __DIR__.'/auth.php';
 // ________________________
 
 
-// // Route::get('/contactus',function () {
-// //     return view('contactus');
-// // });
+
 Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])->name('contact.destroy');
 
 
@@ -74,12 +74,7 @@ Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])
 // Route::get('about', function () {
 //     return view('about');
 // });
-// // Route::get('contact', function () {
-// //     return view('contact');
-// // });
-// Route::get('profile', function () {
-//     return view('profile');
-// });
+
 // Route::get('book', function () {
 //     return view('book');
 // });
@@ -121,6 +116,7 @@ Route::prefix('user')->name('user.')->group(function () {
     Route::get('/booking/{id}', [BookController::class, 'index'])->name('book')->middleware('CheckLogin');
     Route::get('/booking/create/{id}',[BookController::class,'create'])->name('book.create')->middleware('CheckLogin');
     
+    Route::resource('/myreserve',MyreservController::class);
     });
 
 
