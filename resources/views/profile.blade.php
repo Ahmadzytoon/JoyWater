@@ -3,59 +3,109 @@
     profile
 @endsection
 @section('css')
-<link href="UserSide/cssprofile/profile.css" rel="stylesheet">
+   {{-- <link href="UserSide/cssprofile/profile.css" rel="stylesheet">   --}}
+  <link href="UserSide/cssProfil/cssprofile/style.css" rel="stylesheet"> 
 
+@endsection
+@section('showCase')  
+<div class="container-fluid position-relative p-0">
+    <div class="container-fluid py-5 mb-5 hero-header">
+        <div class="container py-5">
+            <div class="row justify-content-center py-5">
+                <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+                    <section class="contact" id="contact">
+                        <h1   style="margin-top:30px;"class="heading">
+                            <span>P</span>
+                            <span>r</span>
+                            <span>o</span>
+                            <span>f</span>
+                            <span>i</span>
+                            <span>l</span>
+                            <span>e</span>
+
+                        </h1>                
+                      </div>
+            </div>
+        </div>
+    </div>
+</div> 
 @endsection
 
 @section('contant')
-<section  id="home">
 
-    <div class="container_profile">
+<div id="home">
 
+<div  style="margin-bottom:100px !important;" class="container profile">
+    <div class="main-body">
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
+                    @foreach ($data as $item)
+                        
+                   
+                    <div class="mt-3">
+                      <h4> {{$item->name}}</h4>
+                      <p class="text-secondary mb-1"> Full Stack Developer </p>
+                      <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-    <div class="box">
-        <img src="images/people3.jpeg" alt="">
-        <ul>
-            <li>your name</li>
-            <li>your age</li>
-        </ul>
-    </div>
+            </div>
+            <div  class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Full Name</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Kenneth Valdez
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      fip@jukmuh.al
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Phone</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      (239) 816-9029
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      Bay Area, San Francisco, CA
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <a class="btn btn-primary " target="__blank" href="rout{{user.profile.edit}}">Edit</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-
-    <div class="about">
-        <ul>
-            <h1>Welcom </h1>
-        </ul>
-        <ul>
-            <h3>Name</h3>
-            <li>orange academy</li>
-        </ul>
-        <ul>
-            <h3>Gender</h3>
-            <li>Male</li>
-        </ul>
-        <ul>
-            <h3>Age</h3>
-            <li>Male</li>
-        </ul>
-        <ul>
-            <h3>Country</h3>
-            <li>Aqaba -Jordan</li>
-        </ul>
-        <ul>
-            <h3> Your Reservation</h3>
-            <p>Jet Ski Parasailing on Wednesday 20-2-2023 at 11am</p>
-        </ul>
-        <ul>
-            <h3>Phone</h3>
-            <li>0777222777</li>
-        </ul>
-        <ul>
-            <h3>Email</h3>
-            <li>watergame@gmail.com</li>
-        </ul>
-    </div>
+        </div>
 </div>
-
-</section>
+@endforeach
 @endsection
