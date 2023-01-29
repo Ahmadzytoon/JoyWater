@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\User\ActivityDetailsController;
 use App\Http\Controllers\User\BookController;
 use App\Http\Controllers\User\RegisterUserController;
 use App\Http\Controllers\User\LoginUserController;
