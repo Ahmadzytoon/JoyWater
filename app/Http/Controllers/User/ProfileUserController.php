@@ -4,6 +4,8 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\User;
+
 
 class ProfileUserController extends Controller
 {
@@ -14,7 +16,9 @@ class ProfileUserController extends Controller
      */
     public function index()
     {
-        //
+        $data=User::all();
+        return view('profile',['data'=>$data]);
+
     }
 
     /**

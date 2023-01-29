@@ -54,7 +54,7 @@
             
         <div class="box">
 
-            <img src="{{URL::asset("storage/image/".$activitydata->image1)}}" alt="">
+          <a href="{{route('user.activity.details', $activitydata->id)}}">  <img src="{{URL::asset("storage/image/".$activitydata->image1)}}" alt=""></a>
             <div class="content">
                 <h3> <i class="fas fa-map-marker-alt"></i> {{ $activitydata->name}}  </h3>
                 <p> {{ $activitydata->short_description}} </p>
