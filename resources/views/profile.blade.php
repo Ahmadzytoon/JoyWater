@@ -63,7 +63,7 @@
                       <h6 class="mb-0">Full Name</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      Kenneth Valdez
+                      {{auth()->user()->name}}
                     </div>
                   </div>
                   <hr>
@@ -72,7 +72,7 @@
                       <h6 class="mb-0">Email</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      fip@jukmuh.al
+                      {{auth()->user()->email}}
                     </div>
                   </div>
                   <hr>
@@ -81,22 +81,16 @@
                       <h6 class="mb-0">Phone</h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      (239) 816-9029
+                      {{auth()->user()->phone}}
                     </div>
                   </div>
                   <hr>
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Address</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                      Bay Area, San Francisco, CA
-                    </div>
-                  </div>
-                  <hr>
+                 
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-primary " target="__blank" href="">Edit</a>
+                      <a class="btn btn-primary " target="__blank" href="{{route('user.profile.edit',auth()->user()->id)}}">Edit</a>
+                      <a class="btn btn-primary " target="__blank" href="{{route('user.Myreserv.show',auth()->user()->id)}}">My Reservation </a>
+
                     </div>
                   </div>
                 </div>

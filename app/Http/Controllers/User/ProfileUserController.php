@@ -16,11 +16,8 @@ class ProfileUserController extends Controller
      */
     public function index()
     {
-        // $id=auth()->user()->id
-        // $data=User::all();
-        // $data = user::find($id);
+    
         return view('profile');
-
     }
 
     /**
@@ -64,8 +61,7 @@ class ProfileUserController extends Controller
      */
     public function edit($id)
     {
-        //
-    }
+        return view('editProfile');    }
 
     /**
      * Update the specified resource in storage.
@@ -74,9 +70,16 @@ class ProfileUserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request,$id)
     {
-        //
+        $profile=User::findorFail($id);
+        $profile->name = $request->name;   
+        $profile->email = $request->email;
+        $profile->phone = $request->phone;
+       
+        $profile->save();
+        return view('profile');
+
     }
 
     /**
