@@ -75,11 +75,11 @@ Contact
                     <td>{{$value->message	}}</td>
 
                     <td>
-                        {{-- <form action="{{Route('contact.destroy',$value->id)}}" method="POST">
-                            @method('PUT')
+                        <form action="{{Route('contact.destroy',$value->id)}}" method="POST">
+                            @method('GET')
                             @csrf 
                             <button type="submit" class="btn btn-block bg-gradient-danger btn-sm">Delete</button>
-                        </form> --}}
+                        </form>
                     </td>
 
                 </tr>

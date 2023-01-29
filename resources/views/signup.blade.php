@@ -20,7 +20,7 @@
 
         <h2>Sign up here</h2>
     
-        <input type="text" class="form-control border border-primary" name="name"  id="signin1" value="{{ old('name')}}"  aria-describedby="emailHelp" class="@error('name') is-invalid @enderror">
+        <input type="text"  name="name"  id="signin1" value="{{ old('name')}}"  aria-describedby="emailHelp" class="@error('name') is-invalid @enderror">
         <p id="sigh1">    
              @error('name')
             <div class="alert alert-danger">{{ $message }}</div>
@@ -28,7 +28,7 @@
     {{-- _______________________________________ --}}
       
      {{-- _______________________________________ --}}
-        <input type="email" class="form-control border border-primary" name="email" id="signin3" value="{{ old('email')}}" aria-describedby="emailHelp" class="@error('email') is-invalid @enderror">
+        <input type="email"  name="email" id="signin3" value="{{ old('email')}}" aria-describedby="emailHelp" class="@error('email') is-invalid @enderror">
 
         <p id="sigh3">
             @error('email')
@@ -39,7 +39,7 @@
 
 
      {{-- _______________________________________ --}}
-     <input type="number" class="form-control border border-primary" name="phone" id="signin4" value="{{ old('phone')}}" aria-describedby="emailHelp" class="@error('phone') is-invalid @enderror">
+     <input type="number"  name="phone" id="signin4" value="{{ old('phone')}}" aria-describedby="emailHelp" class="@error('phone') is-invalid @enderror">
        
         <p id="sigh4">
             @error('phone')
@@ -49,15 +49,15 @@
 
 
     {{-- _______________________________________ --}}
-    <input type="password" class="form-control border border-primary" id="signin5"  name="password" value="{{ old('password')}}" class="@error('password') is-invalid @enderror">
+    <input type="password"  id="signin5"  name="password" value="{{ old('password')}}" class="@error('password') is-invalid @enderror">
 
         <p id="sigh5">
             @error('password')
             <div class="alert alert-danger">{{ $message }}</div>
            @enderror
         </p>
-        <p class="mb-0  text-center">Do you have an account? <a href="{{route('user.login')}}"
-            class="text-primary fw-bold">Login</a></p>
+        <p class="">Do you have an account? <a href="{{route('user.login')}}"
+            class="">Login</a></p>
 
      {{-- _______________________________________ --}}
         <button id="btn" type="submit" >Register</button>
@@ -69,21 +69,3 @@
 
 {{-- _______________________________________ --}}
 
-<div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control border border-primary" id="exampleInputPassword1" name="password" value="{{ old('password')}}" class="@error('password') is-invalid @enderror">
-    @error('password')
-    <div class="alert alert-danger">{{ $message }}</div>
-   @enderror
-</div>
-{{-- <p class="small"><a class="text-primary" href="forget-password.html">Forgot password?</a></p> --}}
-<div class="d-grid">
-    <button class="btn btn-primary" type="submit">Sign Up</button>
-</div>
-</form>
-<div class="mt-3">
-<p class="mb-0  text-center">Do you have an account? <a href="{{route('user.login')}}"
-        class="text-primary fw-bold">Login</a></p>
-</div>
-</div>
-</div>

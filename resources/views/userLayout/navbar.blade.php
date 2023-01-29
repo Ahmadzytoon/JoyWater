@@ -2,22 +2,39 @@
 
     <div id="menu-bar" class="fas fa-bars"></div>
 
-    <a href="#" class="logo"><span>T</span>ravel</a>
+    <a href="#" class="logo"><span style="color: rgb(11, 73, 207)">Joy</span> Water</a>
 
     <nav class="navbar">
-        <a href="/">home</a>
-        <a href="services">Activity</a>
-        <a href="about">about</a>
-        <a href="contact">contact</a>
+        <a href="{{route('user.index')}}">home</a>
+        <a href="{{route('user.show')}}">Activity</a>
+        <a href="{{route('user.about')}}">about</a>
+        <a href="{{route('user.contact')}}">contact</a>
     </nav>
 
-    {{-- <div class="icons">
+    <div class="icons">
         <i class="fas fa-search" id="search-btn"></i>
+    <div style="
+    display: inline-block;
+    font-size: 1.7rem;">@if(!Auth::user())
+        <a href="{{route('user.login')}}" class="nav-item nav-link">login</a>
+        @endif
+        @if(Auth::user())
+        <a href="{{route('user.login.destroy')}}" class="nav-item nav-link">logout</a>
+        @endif</div>
+        <div style="
+        display: inline-block;
+        font-size: 1.7rem; margin-left:13px">
+             @if(!Auth::user())
+            <a href="{{route('user.signup.index')}}" class="">Register</a>
+            @endif
+            @if(Auth::user())
+            {{-- <a href="{{route('user.profile.index')}}" class="btn btn-primary rounded-pill py-2 px-4">Account</a> --}}
+            @endif
+        </div>
+        {{-- <i class="fas fa-user" id="login-btn"></i> --}}
+    </div>
 
-        <i class="fas fa-user" id="login-btn"></i>
-    </div> --}}
-
-    <div class="dropdown row">
+    {{-- <div class="dropdown row">
        
             <i class="fas fa-user " style=" font-size:3rem; color:white;" data-bs-toggle="dropdown" aria-expanded="false"></i>
        
@@ -25,7 +42,7 @@
           <li><a class="dropdown-item btn p-1" style="color:black !important" href="#">Register</a></li>
           <li><a class="dropdown-item btn p-1" style="color:black !important" href="#">LogIn</a></li>
         </ul>
-      </div>
+      </div> --}}
 
     <form action="" class="search-bar-container">
         <input type="search" id="search-bar" placeholder="search here...">
@@ -35,7 +52,7 @@
 </header>
 
 <!-- login form container  -->
-<div class="login-form-container">
+{{-- <div class="login-form-container">
 
     <i class="fas fa-times" id="form-close"></i>
 
@@ -50,4 +67,4 @@
         <p>don't have and account? <a href="#">register now</a></p>
     </form>
 
-</div>
+</div> --}}

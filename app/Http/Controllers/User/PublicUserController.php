@@ -16,4 +16,11 @@ class PublicUserController extends Controller
 
 
     }
+    public function show(){
+        $data = Activity::all();
+
+        return view('activities',['data'=>$data]);
+
+
+    }
 }

@@ -44,12 +44,15 @@ Route::resource('/users',UserController::class);
 Route::resource('/activity',ActivityController::class);
 Route::resource('/reservation',ReservationController::class);
 });
+Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('contact.createForm');
+
+Route::get('/contact/store',[ContactUsFormController::class,'ContactUsForm'])->name('contact.store');
 require __DIR__.'/auth.php';
 
 
 
-Route::get('/contact', [ContactUsFormController::class, 'destroy'])->name('contact.destroy');
-Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('contact.createForm');
+// Route::get('/contact', [ContactUsFormController::class, 'destroy'])->name('contact.destroy');
+// Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('contact.createForm');
 
 // Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
 
@@ -59,11 +62,8 @@ Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('co
 // // Route::get('/contactus',function () {
 // //     return view('contactus');
 // // });
-// Route::get('/contact', [ContactUsFormController::class, 'destroy'])->name('contact.destroy');
+Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])->name('contact.destroy');
 
-// Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('contact.createForm');
-
-// // Route::post('/contact', [ContactUsFormController::class, 'ContactUsForm'])->name('contact.store');
 
 
 // Route::get('home', function () {
@@ -86,19 +86,20 @@ Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('co
 // });
 
 // ________________________________________________
-// Route::get('/gg',[PublicUserController::class,'index'])->name('index');
 Route::prefix('user')->name('user.')->group(function () {
 
 
 
     Route::get('/',[PublicUserController::class,'index'])->name('index');
-    
+    Route::get('/activity',[PublicUserController::class,'show'])->name('show');
+
     Route::get('/about',function(){
         return view('about');
     })->name('about');
     
+    
     Route::get('/contact',function(){
-        return view('publicUser.contact');
+        return view('contact');
     })->name('contact');
     
     Route::resource('/signup',RegisterUserController::class);
@@ -107,7 +108,7 @@ Route::prefix('user')->name('user.')->group(function () {
     Route::get('/login/check',[LoginUserController::class,'LoginPost'])->name('login.check');
     Route::get('/login/destroy',[LoginUserController::class,'destroy'])->name('login.destroy');
     
-    Route::resource('/profile',ProfileUserController::class);
+    // Route::resource('/profile',ProfileUserController::class);
     
     
     Route::get('/activity_details/{id}',[ActivityDetailsController::class,'index'])->name('activity.details');

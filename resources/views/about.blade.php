@@ -20,15 +20,15 @@ About Us
      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
  
      <!-- Libraries Stylesheet -->
-     <link href="lib/animate/animate.min.css" rel="stylesheet">
-     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+     <link href="/lib/animate/animate.min.css" rel="stylesheet">
+     <link href="/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+     <link href="/lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
  
      <!-- Customized Bootstrap Stylesheet -->
-     <link href="UserSide/cssAbout/bootstrap.min.css" rel="stylesheet">
+     <link href="/UserSide/cssAbout/bootstrap.min.css" rel="stylesheet">
  
      <!-- Template Stylesheet -->
-     <link href="UserSide/cssAbout/style.css" rel="stylesheet">
+     <link href="/UserSide/cssAbout/style.css" rel="stylesheet">
 
 @endsection
 
@@ -171,16 +171,16 @@ About Us
                     <div class="col-lg-6">
                         <div class="row g-3">
                             <div class="col-6 text-end">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="images/about1_n.jpg" style="margin-top: 25%;">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="../images/about1_n.jpg" style="margin-top: 25%;">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="images/about2.jpeg">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="../images/about2.jpeg">
                             </div>
                             <div class="col-6 text-end">
-                                <img style=" width: 70% !important;" class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="images/about4.jpg">
+                                <img style=" width: 70% !important;" class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="../images/about4.jpg">
                             </div>
                             <div class="col-6 text-start">
-                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="images/1.jpg">
+                                <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="../images/1.jpg">
                             </div>
                         </div>
                     </div>
@@ -204,7 +204,7 @@ About Us
                 <div class="col-lg-3 col-md-4 wow fadeInUp m-5 " data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid rounded" src="images/people4.jpeg" alt="" >
+                            <img class="img-fluid rounded" src="../images/people4.jpeg" alt="" >
                         </div>
                         <div class="text-center p-4">
                             <h5  style="font-size:20px;"class="mb-0">first & last Name</h5>
@@ -216,7 +216,7 @@ About Us
                 <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid rounded" src="images/people3.jpeg" alt="" >
+                            <img class="img-fluid rounded" src="../images/people3.jpeg" alt="" >
                         </div>
                         <div class="text-center p-4">
                             <h5 style="font-size:20px;" class="mb-0">first & last Name</h5>
@@ -228,7 +228,7 @@ About Us
                 <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid rounded" src="images/people2.jpg" alt="" >
+                            <img class="img-fluid rounded" src="../images/people2.jpg" alt="" >
                         </div>
                         <div class="text-center p-4">
                             <h5 style="font-size:20px;" class="mb-0">first & last Name</h5>
@@ -241,7 +241,7 @@ About Us
                 <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid rounded" src="images/people1.jpeg" alt="" >
+                            <img class="img-fluid rounded" src="../images/people1.jpeg" alt="" >
                         </div>
                         <div class="text-center p-4">
                             <h5 style="font-size:20px;" class="mb-0">first & last Name</h5>
@@ -253,7 +253,7 @@ About Us
                 <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
                     <div class="team-item">
                         <div class="overflow-hidden">
-                            <img class="img-fluid rounded" src="img/team-1.jpg" alt="" >
+                            <img class="img-fluid rounded" src="../img/team-1.jpg" alt="" >
                         </div>
                         <div class="text-center p-4">
                             <h5  style="font-size:20px;" class="mb-0">first & last Name</h5>
