@@ -278,7 +278,7 @@ header .search-bar-container label:hover{
   flex-flow: column;
   position: relative;
    overflow: hidden;
-   background: linear-gradient(to bottom,black,rgba(0, 0, 0, 0.037));
+   /* background: linear-gradient(to bottom,black,rgba(0, 0, 0, 0.037)); */
    
 }
 
@@ -320,13 +320,13 @@ header .search-bar-container label:hover{
 
 
 
-.home .controls{
+/* .home .controls{
   padding:1rem;
   border-radius: 5rem;
   background:rgba(0,0,0,.7);
   position: relative;
   top:10rem;
-}
+} */
 
 .home .controls .vid-btn{
   height:2rem;

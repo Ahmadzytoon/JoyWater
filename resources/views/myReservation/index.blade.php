@@ -50,12 +50,19 @@
         <table class="table table-head-fixed text-nowrap">
           <thead>
             <tr>
-              <th>#11</th>
-              <th>Activity Name</th>
+              <th>#</th>
+              <th>Name</th>
+              {{-- <th>last_name</th> --}}
+              <th>Phone</th>
+              <th>Email</th>
+              <th>Date</th>
               <th>NO.Guest</th>
               <th>Price</th>
               <th>Status</th>
-              <th>Edit</th>
+              <th>Activity</th>
+              <th>User Name</th>
+              <th>Accept</th>
+              <th>Rejected</th>
             </tr>
           </thead>
           <tbody>
@@ -67,9 +74,11 @@
                   {{-- <td>{{$value['last_name']	}}</td> --}}
                   <td>{{$value['phoneNumber']	}}</td>
                   <td>{{$value['email']	}}</td>
+                  <td>{{$value['activity']}}</td>
+                  <td>{{$value['price']	}}</td>
+                  {{-- <td>{{$value['last_name']	}}</td> --}}
                   <td>{{$value['res_date']	}}</td>
                   <td>{{$value['number_of_guest']	}}</td>
-                  <td>{{$value['price']	}}</td>
                   @if ($value['status']=="Pending")
                   <td><span class="badge bg-warning">Pending</span></td>
                   @endif
@@ -82,24 +91,23 @@
                   <td><span class="badge bg-danger">Rejected</span></td>
 
                   @endif
-                  <td>{{$value['activity']}}</td>
                   <td>{{$value['user']}}</td>
 
                   <td>
-                      <form action="{{Route('admin.reservation.update',$value['id'])}}" method="POST">
+                      <form action="{{url('user/myreserve/edit',$value['id'])}}" method="POST">
                           @method('PUT')
                           {{-- Pending --}}
                           @csrf
-                          <button type="submit" class="btn btn-block  bg-success btn-sm">Accept</button>
+                          <button type="submit" class="btn btn-block  bg-success btn-sm">Edit</button>
                       </form>
                   </td>
               
                 <td>
-                <form action="{{Route('admin.reservation.destroy',$value['id'])}}" method="POST">
-                  @method('delete')
+                <form action="{{url('user/myreserve/destroy',$value['id'])}}" method="POST">
+                  @method('DELETE')
                   {{-- Pending --}}
                   @csrf
-                  <button type="submit" class="btn btn-block bg-gradient-danger btn-sm">Rejected</button>
+                  {{-- <button type="submit" class="btn btn-block bg-gradient-danger btn-sm">Rejected</button> --}}
               </form>
                 </td>
               </tr>
