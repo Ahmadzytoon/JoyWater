@@ -43,11 +43,10 @@
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
                     <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle" width="150">
-                    @foreach ($data as $item)
                         
                    
                     <div class="mt-3">
-                      <h4> {{$item->name}}</h4>
+                      <h4> </h4>
                       <p class="text-secondary mb-1"> Full Stack Developer </p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
                     </div>
@@ -97,7 +96,7 @@
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-primary " target="__blank" href="rout{{user.profile.edit}}">Edit</a>
+                      <a class="btn btn-primary " target="__blank" href="">Edit</a>
                     </div>
                   </div>
                 </div>
@@ -107,5 +106,4 @@
 
         </div>
 </div>
-@endforeach
 @endsection
