@@ -89,6 +89,8 @@
                   <div class="row">
                     <div class="col-sm-12">
                       <a class="btn btn-primary " target="__blank" href="{{route('user.profile.edit',auth()->user()->id)}}">Edit</a>
+                      <a class="btn btn-primary " target="__blank" href="{{route('user.Myreserv.index',auth()->user()->id)}}">My Reservation </a>
+
                     </div>
                   </div>
                 </div>
