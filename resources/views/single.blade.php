@@ -60,7 +60,7 @@
                         <ul class="row">
                             <li class="col-3"> <b>Price :</b> </li>
                             <li class="col-1 mt-3">
-                                <p class="px-3" style="font-size: 1.4rem; border:1px solid #04448C"><b>{{ $activitydata->price}}$</b></p>
+                                <p class="px-3" style="font-size: 1.4rem; border:1px solid #04448C"><b>{{ $activitydata->price}}JD</b></p>
                             </li>
                         </ul>
                         <ul class="row p-2 mt-5">

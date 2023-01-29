@@ -28,7 +28,7 @@
             <a href="{{route('user.signup.index')}}" class="">Register</a>
             @endif
             @if(Auth::user())
-            {{-- <a href="{{route('user.profile.index')}}" class="btn btn-primary rounded-pill py-2 px-4">Account</a> --}}
+            {{-- <a href="{{route('user.profile.index')}}" class="">Account</a> --}}
             @endif
         </div>
         {{-- <i class="fas fa-user" id="login-btn"></i> --}}
