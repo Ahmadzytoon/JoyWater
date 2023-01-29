@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Search;
 use App\Http\Controllers\User\ActivityDetailsController;
 use App\Http\Controllers\User\MyreservatController;
 use App\Http\Controllers\User\BookController;
@@ -106,6 +107,8 @@ Route::prefix('user')->name('user.')->group(function () {
     
     // Route::resource('/profile',ProfileUserController::class);
     
+    Route::get('/search',[Search::class , 'search']);
+
     
     Route::get('/activity_details/{id}',[ActivityDetailsController::class,'index'])->name('activity.details');
 

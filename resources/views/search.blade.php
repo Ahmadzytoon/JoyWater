@@ -12,6 +12,12 @@
 <!-- home section ends -->
 <!-- packages section starts  -->
 
+
+<div class="searchBtn">
+    <input type="text" name="search" id="search">
+    <button> Search </button>
+</div>
+
 <section class="packages" id="packages">
 
     <h1 class="heading">
