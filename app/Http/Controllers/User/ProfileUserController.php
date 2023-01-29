@@ -16,7 +16,9 @@ class ProfileUserController extends Controller
      */
     public function index()
     {
-        $data=User::all();
+        $id=auth()->user()->id
+        // $data=User::all();
+        $data = user::find($id);
         return view('profile',['data'=>$data]);
 
     }
@@ -40,6 +42,8 @@ class ProfileUserController extends Controller
     public function store(Request $request)
     {
         //
+        $data = user::find($request);
+        return view('profile',['data'=>$data]);
     }
 
     /**
