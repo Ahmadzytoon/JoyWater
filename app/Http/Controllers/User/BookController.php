@@ -15,7 +15,6 @@ class BookController extends Controller
     {
         $data = Activity::findOrfail($id);
         return view('book',['data'=>$data]);
-
     }
 
 

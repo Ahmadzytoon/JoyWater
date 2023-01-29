@@ -11,7 +11,6 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ActivityController;
 use App\Http\Controllers\Admin\ReservationController;
-
 use App\Http\Controllers\ContactUsFormController;
 /*
 |--------------------------------------------------------------------------
@@ -44,7 +43,7 @@ Route::resource('/users',UserController::class);
 Route::resource('/activity',ActivityController::class);
 Route::resource('/reservation',ReservationController::class);
 });
-Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('contact.createForm');
+Route::get('/contact',[ContactUsFormController::class,'createForm'])->name('contact.createForm');
 
 Route::get('/contact/store',[ContactUsFormController::class,'ContactUsForm'])->name('contact.store');
 require __DIR__.'/auth.php';
@@ -75,9 +74,6 @@ Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])
 // // Route::get('contact', function () {
 // //     return view('contact');
 // // });
-// Route::get('profile', function () {
-//     return view('profile');
-// });
 // Route::get('book', function () {
 //     return view('book');
 // });
