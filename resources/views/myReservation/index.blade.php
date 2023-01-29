@@ -37,6 +37,10 @@
 @endsection
 
 {{--============= contant ===============--}}
+{{--============= contant ===============--}}
+{{--============= contant ===============--}}
+{{--============= contant ===============--}}
+{{--============= contant ===============--}}
 @section('contant')
 
 <div class="row container m-auto">
@@ -46,7 +50,7 @@
         <table class="table table-head-fixed text-nowrap">
           <thead>
             <tr>
-              <th>#</th>
+              <th>#11</th>
               <th>Activity Name</th>
               <th>NO.Guest</th>
               <th>Price</th>
