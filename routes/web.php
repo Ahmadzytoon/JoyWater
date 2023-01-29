@@ -102,6 +102,8 @@ Route::prefix('user')->name('user.')->group(function () {
     
     Route::resource('/signup',RegisterUserController::class);
     // Route::post('/search' , [Search::class , 'search'])->name('search');
+
+
     Route::get('/login',[LoginUserController::class,'index'])->name('login');
     Route::get('/login/check',[LoginUserController::class,'LoginPost'])->name('login.check');
     Route::get('/login/destroy',[LoginUserController::class,'destroy'])->name('login.destroy');

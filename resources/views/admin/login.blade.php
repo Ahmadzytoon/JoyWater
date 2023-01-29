@@ -17,7 +17,7 @@
 <body>
     <x-auth-session-status :status="session('status')" />
 
-
+{{-- {{dd('login')}} --}}
     <a href="index.html"><img  id="logoLogin" src="logo.png" alt="logo"></a>
 
 <form method="POST" action="{{ route('login') }}" id="loginForm">
