@@ -1,71 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.png">
-    <title>Checker</title>
-    <link rel="stylesheet" href="{{asset('assets/Signup.css')}}">
+  <head>
+  	<title>Joy Water</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <script src="https://kit.fontawesome.com/73358cb070.js" crossorigin="anonymous"></script>
-    
-    <!-- <link rel="stylesheet" href="login.css"> -->
-</head>
-<body>
-    
-    <a href="index.html"><img  id="logoSignUp" src="logo.png" alt="logo"></a>
-    <form action="{{route('user.signup.store')}}" method="post" id="form" >
-        @csrf
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
 
-        <h2>Sign up here</h2>
-    
-        <input type="text"  name="name"  id="signin1" value="{{ old('name')}}"  aria-describedby="emailHelp" class="@error('name') is-invalid @enderror">
-        <p id="sigh1">    
-             @error('name')
-            <div class="alert alert-danger">{{ $message }}</div>
-           @enderror</p>
-    {{-- _______________________________________ --}}
-      
-     {{-- _______________________________________ --}}
-        <input type="email"  name="email" id="signin3" value="{{ old('email')}}" aria-describedby="emailHelp" class="@error('email') is-invalid @enderror">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="/login/css/style.css">
 
-        <p id="sigh3">
-            @error('email')
-            <div class="alert alert-danger">{{ $message }}</div>
-           @enderror
-        </p>
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					{{-- <h2 class="heading-section">Joy Water</h2> --}}
+				</div>
+			</div>
+            {{-- {{URL::asset("storage/image/".$activitydata->image1)}} --}}
+			<div class="row justify-content-center">
+				<div class="col-md-7 col-lg-5">
+					<div class="wrap">
+						<div class="img" style="background-image: url(/login/images/bg-1.jpg);"></div>
+						<div class="login-wrap p-4 p-md-5">
+			      	<div class="d-flex">
+			      		<div class="w-100">
+			      			<h3 class="mb-4">Sign Up</h3>
+			      		</div>
+								<div class="w-100">
+									<p class="social-media d-flex justify-content-end">
+										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-facebook"></span></a>
+										<a href="#" class="social-icon d-flex align-items-center justify-content-center"><span class="fa fa-twitter"></span></a>
+									</p>
+								</div>
+			      	</div>
+							<form action="{{route('user.signup.store')}}" method="post" class="signin-form">
+                                {{-- @method('GET') --}}
+
+                                @csrf
+                                {{-- _______________________________________ --}}
+			      		<div class="form-group mt-3">
+			      			<input type="text" class="form-control" name="name" value="{{ old('name')}}"  class="@error('name') is-invalid @enderror">
+			      			<label class="form-control-placeholder" for="">Name</label>
+                              @error('name')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+
+			      		</div>
+						  <br>
+
+                        {{-- ___________________email____________________ --}}
+		            <div class="form-group">
+		              <input id="password-field" type="email" class="form-control" name="email" value="{{ old('email')}}"  class="@error('email') is-invalid @enderror">
+		              <label class="form-control-placeholder" for="">Email</label> 
+                      
+                      @error('email')
+                      <div class="alert alert-danger">{{ $message }}</div>
+                     @enderror
+		            </div>
+					<br>
+
+                    {{-- ____________________number___________________ --}}
+                    <div class="form-group">
+                        <input id="password-field" type="number" name="phone" class="form-control" value="{{ old('phone')}}" class="@error('phone') is-invalid @enderror">
+                        <label class="form-control-placeholder" for="">Number</label> 
+                        
+                        @error('phone')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
+                      </div>
+<br>
+                    {{-- ________________passwrd_______________________ --}}
+                    <div class="form-group">
+                        <input id="password-field" type="password" class="form-control" name="password"value="{{ old('password')}}" class="@error('password') is-invalid @enderror">
+                        <label class="form-control-placeholder" for="password">Password</label> 
+                        
+                        @error('password')
+                        <div class="alert alert-danger">{{ $message }}</div>
+                       @enderror
+                        <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                      </div>
 
 
+                    {{-- _______________________________________ --}}
+                    {{-- _________________submit______________________ --}}
 
-     {{-- _______________________________________ --}}
-     <input type="number"  name="phone" id="signin4" value="{{ old('phone')}}" aria-describedby="emailHelp" class="@error('phone') is-invalid @enderror">
-       
-        <p id="sigh4">
-            @error('phone')
-            <div class="alert alert-danger">{{ $message }}</div>
-           @enderror
-        </p>
+		            <div class="form-group">
+		            	<button type="submit" class="form-control btn btn-primary rounded submit px-3">Register</button>
+		            </div>
+		            <div class="form-group d-md-flex">
+		            
+		          </form>
+		        </div>
+		      </div>
+				</div>
+			</div>
+		</div>
+	</section>
 
+	<script src="/login/js/jquery.min.js"></script>
+  <script src="/login/js/popper.js"></script>
+  <script src="/login/js/bootstrap.min.js"></script>
+  <script src="/login/js/main.js"></script>
 
-    {{-- _______________________________________ --}}
-    <input type="password"  id="signin5"  name="password" value="{{ old('password')}}" class="@error('password') is-invalid @enderror">
-
-        <p id="sigh5">
-            @error('password')
-            <div class="alert alert-danger">{{ $message }}</div>
-           @enderror
-        </p>
-        <p class="">Do you have an account? <a href="{{route('user.login')}}"
-            class="">Login</a></p>
-
-     {{-- _______________________________________ --}}
-        <button id="btn" type="submit" >Register</button>
-         
-    </form> 
-</body>
+	</body>
 </html>
-
-
-{{-- _______________________________________ --}}
 
