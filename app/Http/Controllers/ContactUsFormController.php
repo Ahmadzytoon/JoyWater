@@ -14,7 +14,7 @@ class ContactUsFormController extends Controller
 
   
     // This func will show contact page
-    public function createForm(Request $request) {
+    public function createForm() {
 
       $data=contact::all();
 
@@ -49,7 +49,7 @@ class ContactUsFormController extends Controller
 public function destroy($id)
 {
   contact::findOrfail($id)->delete();
-    return redirect()->route('ContactUsForm.createForm');
+    return redirect()->route('contact.createForm');
 }
 }
 

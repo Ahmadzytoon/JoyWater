@@ -15,16 +15,15 @@
      <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
  
      <!-- Libraries Stylesheet -->
-     <link href="lib/animate/animate.min.css" rel="stylesheet">
-     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
- 
+     <link href="{{ asset('lib/animate/animate.min.css')}}" rel="stylesheet">
+     <link href="{{ asset('lib/owlcarousel/assets/owl.carousel.min.css')}}" rel="stylesheet">
+     <link href="{{ asset('lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css')}}" rel="stylesheet" />
      <!-- Customized Bootstrap Stylesheet -->
-     <link href="UserSide/cssAbout/bootstrap.min.css" rel="stylesheet">
+     <link href="/UserSide/cssAbout/bootstrap.min.css" rel="stylesheet">
  
      <!-- Template Stylesheet -->
-     <link href="UserSide/cssAbout/style.css" rel="stylesheet">
-     <link href="UserSide/csscontact/contact.css" rel="stylesheet">
+     <link href="/UserSide/cssAbout/style.css" rel="stylesheet">
+     <link href="/UserSide/csscontact/contact.css" rel="stylesheet">
      <script src="https://kit.fontawesome.com/ccf160e1e6.js" crossorigin="anonymous"></script>
 
      @endsection
@@ -141,20 +140,23 @@
 <hr>
 <div  class="row">
     <div style="margin-top:5%; margin-bottom:5%;" class="col-md-7 image">
-        <img src="images/about4.jpg" alt="" height="350px width=350px">
+        <img src="../images/about4.jpg" alt="" height="350px width=350px">
     </div>
     <div style="margin-top:5%; margin-bottom:5%;" class="row col-md-8">
-        <form action="">
+        <form  method="POST" action="{{ route('contact.store')}}">
+            @method('GET')
+            @csrf
+            
             <div class="inputBox">
-                <input type="text" placeholder="name">
-                <input type="email" placeholder="email">
+                <input type="text" name="name" placeholder="name">
+                <input type="email" name="email" placeholder="email">
             </div>
             <div class="inputBox">
-                <input type="number" placeholder="number">
-                <input type="text" placeholder="subject">
+                <input type="number" name="phoneNumber" placeholder="number">
+                <input type="text" name="subject" placeholder="subject">
             </div>
-            <textarea placeholder="message" name="" id="" cols="30" rows="10"></textarea>
-            <input type="submit" class="send_btn" value="send message">
+            <textarea placeholder="message" name="message" id="" cols="30" rows="10"></textarea>
+            <input name="send" type="submit" class="send_btn" value="send message">
         </form>
     </div>
 </div>
