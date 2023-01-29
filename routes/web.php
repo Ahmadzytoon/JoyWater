@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\User\ActivityDetailsController;
+use App\Http\Controllers\User\MyreservatController;
 use App\Http\Controllers\User\BookController;
 use App\Http\Controllers\User\RegisterUserController;
 use App\Http\Controllers\User\LoginUserController;
@@ -13,6 +14,8 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\ActivityController;
 use App\Http\Controllers\Admin\ReservationController;
 use App\Http\Controllers\ContactUsFormController;
+use App\Http\Controllers\User\MyreservController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -59,9 +62,7 @@ require __DIR__.'/auth.php';
 // ________________________
 
 
-// // Route::get('/contactus',function () {
-// //     return view('contactus');
-// // });
+
 Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])->name('contact.destroy');
 
 
@@ -72,9 +73,7 @@ Route::get('/contact/destroy/{id}', [ContactUsFormController::class, 'destroy'])
 // Route::get('about', function () {
 //     return view('about');
 // });
-// // Route::get('contact', function () {
-// //     return view('contact');
-// // });
+
 // Route::get('book', function () {
 //     return view('book');
 // });
@@ -114,6 +113,7 @@ Route::prefix('user')->name('user.')->group(function () {
     Route::get('/booking/{id}', [BookController::class, 'index'])->name('book')->middleware('CheckLogin');
     Route::get('/booking/create/{id}',[BookController::class,'create'])->name('book.create')->middleware('CheckLogin');
     
+    Route::resource('/myreserve',MyreservController::class);
     });
 
 
