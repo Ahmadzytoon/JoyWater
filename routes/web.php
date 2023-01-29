@@ -48,6 +48,7 @@ Route::resource('/reservation',ReservationController::class);
 });
 Route::get('/contact', [ContactUsFormController::class, 'createForm'])->name('contact.createForm');
 
+
 Route::get('/contact/store',[ContactUsFormController::class,'ContactUsForm'])->name('contact.store');
 require __DIR__.'/auth.php';
 
