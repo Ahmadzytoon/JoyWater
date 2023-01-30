@@ -42,12 +42,12 @@
                 <div class="card-body">
                   <div class="d-flex flex-column align-items-center text-center">
 
-                    <img src="../images/profileImages/{{auth()->user()->id}}.png" alt="{{auth()->user()->name}}" class="rounded-circle" width="150">
+                    <img src="/images/people1.jpeg" alt="{{auth()->user()->name}}"  width="150">
                 
                         
           
                     <div class="mt-3">
-                      <h4> {{auth()->user()->name}} </h4>
+                      {{-- <h4> {{auth()->user()->name}} </h4> --}}
                       {{-- <h4> aaa </h4>
                       <p class="text-secondary mb-1"> Full Stack Developer </p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p> --}}
@@ -101,7 +101,7 @@
                   <hr> 
                   <div class="row">
                     <div class="col-sm-12">
-                      <a class="btn btn-primary " target="__blank"  href="{{route('user.profile.edit',auth()->user()->id)}}">Edit</a>
+                      <a class="btn btn-primary" target="__blank"  href="{{route('user.profile.edit',auth()->user()->id)}}">Edit</a>
                       <a  style="padding-left:30px !important;" class="btn btn-primary " target="__blank"  href="">My Reservation</a>
                     </div>                                         
                   </div>
