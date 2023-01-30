@@ -25,7 +25,18 @@
      <link href="/UserSide/cssAbout/style.css" rel="stylesheet">
      <link href="/UserSide/csscontact/contact.css" rel="stylesheet">
      <script src="https://kit.fontawesome.com/ccf160e1e6.js" crossorigin="anonymous"></script>
-
+     <style>
+        .hero-header{
+            background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , url(/images/showMyReserv1.jpg) !important;
+     background-position: center center !important;
+     background-repeat: no-repeat !important;
+     background-size: cover !important;
+        }
+     
+        .bg-dark{
+          background-image: linear-gradient(180deg, #0e2a47,#04458f) !important;
+        }
+     </style>
      @endsection
 
 
