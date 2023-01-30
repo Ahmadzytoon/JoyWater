@@ -17,8 +17,22 @@
     {{-- bootstrap --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+{{--  --}}
+
     <!-- Template Stylesheet -->
     <link href="/UserSide/cssBook/style.css" rel="stylesheet">
+    <style>
+         .hero-header{
+            background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , url(../images/showMyReserv.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+        }
+
+        .bg-dark{
+          background-image: linear-gradient(180deg, #0e2a47,#04458f) !important;
+        }
+    </style>
 @endsection
 
 
@@ -30,7 +44,13 @@
             <div class="row justify-content-center py-5">
                 <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
                     <h1 class="heading">
-                        {{-- {{ $activitydata->name}}  --}}
+                        <span>P</span>
+                        <span>r</span>
+                        <span>o</span>
+                        <span>f</span>
+                        <span>i</span>
+                        <span>l</span>
+                        <span>e</span>
                     </h1>
                 </div>
             </div>
@@ -46,39 +66,39 @@
 {{--============= contant ===============--}}
 @section('contant')
 
-<div class="row container m-auto">
-  <div class="col-12">
-    <div class="card">
-            <div class="card-body table-responsive p-0" style="height: 300px;">
-        <table class="table table-striped table-head-fixed text-nowrap ">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              {{-- <th>last_name</th> --}}
-              <th>Activity</th>
-              <th>Date</th>
-              <th>Time</th>
-              <th>NO.Guest</th>
-              <th>Price</th>
-              <th>Status</th>
-              <th>Accept</th>
-              <th>Rejected</th>
+<div class="row container m-auto d-flex align-items-center align-items-center mb-5 justify-content-center">
+  <div class="col-12 align-items-center">
+    <div class="card mb-5">
+            <div class="card-body table-responsive p-0">
+        <table class="table table-striped-columns table-hover table-head-fixed text-nowrap align-middle ">
+          <thead class="">
+            <tr class="fs-2 fw-bold bg-dark bg-gradient ">
+              <th class="text-white">Name</th>
+              <th class="text-white">Activity</th>
+              <th class="text-white">Date</th>
+              <th class="text-white">Time</th>
+              <th class="text-white">NO.Guest</th>
+              <th class="text-white">Price</th>
+              <th class="text-white">Status</th>
+              <th class="text-white">Edit</th>
+              <th class="text-white">Delete</th>
+
+              {{--  --}}
             </tr>
           </thead>
           <tbody>
               @foreach ($data as $value)
 
-              <tr>
+              <tr class="fs-3 align-items-center align-middle ">
                   {{-- <td>{{$value['id']}}</td> --}}
                   <td>{{$value['first_name'].$value['last_name']}}</td>
                   {{-- <td>{{$value['last_name']	}}</td> --}}
                   <td>{{$value['activity']}}</td>
-                  <td>{{$value['price']	}}</td>
-                  {{-- <td>{{$value['last_name']	}}</td> --}}
                   <td>{{$value['res_date']	}}</td>
                   <td>{{$value['time']	}}</td>
                   <td>{{$value['number_of_guest']	}}</td>
+                  <td>{{$value['price']	}}</td>
+                  {{-- <td>{{$value['last_name']	}}</td> --}}
                   @if ($value['status']=="Pending")
                   <td><span class="badge bg-warning">Pending</span></td>
                   @endif
@@ -91,18 +111,15 @@
                   <td><span class="badge bg-danger">Rejected</span></td>
 
                   @endif
-                  {{-- <td>{{$value['user']}}</td> --}}
 
-                  <td><a href="{{Route('user.myreserve.edit',$value['id'])}}"><button type="button" class="btn btn-block bg-gradient-success btn-sm">Edit</button>
+                  <td><a href="{{Route('user.myreserve.edit',$value['id'])}}"><button type="button" class="btn btn-block bg-success bg-gradient btn-sm fs-3 align-middle">Edit</button>
                   </a></td>
-                  <td>
+                  
               
                 <td>
-                <form action="{{url('user/myreserve/destroy',$value['id'])}}" method="POST">
+                <form action="{{url('user/myreserve/destroy',$value['id'])}}" method="POST" class=""> <button type="button" class="btn btn-block bg-gradient bg-danger btn-sm fs-3 align-middle">Delete</button>
                   @method('DELETE')
-                  {{-- Pending --}}
                   @csrf
-                  {{-- <button type="submit" class="btn btn-block bg-gradient-danger btn-sm">Rejected</button> --}}
               </form>
                 </td>
               </tr>

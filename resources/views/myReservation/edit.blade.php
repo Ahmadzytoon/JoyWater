@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="/singleCSS/SINGLEmain.css">
     <!-- Template Stylesheet -->
     <link href="/UserSide/cssBook/style.css" rel="stylesheet">
-@endsection
+   @endsection
 
 
 {{--============= showCase ===============--}}
@@ -50,7 +50,7 @@
         <table class="table table-head-fixed text-nowrap">
           <thead>
             <tr>
-              <th>#11</th>
+              <th>Activity Name</th>
               <th>Activity Name</th>
               <th>NO.Guest</th>
               <th>Price</th>
