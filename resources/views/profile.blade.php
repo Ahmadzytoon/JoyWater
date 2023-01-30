@@ -5,7 +5,7 @@
 @section('css')
    {{-- <link href="UserSide/cssprofile/profile.css" rel="stylesheet">   --}}
   <link href="UserSide/cssProfil/cssprofile/style.css" rel="stylesheet"> 
-
+  
 @endsection
 @section('showCase')  
 <div class="container-fluid position-relative p-0">
