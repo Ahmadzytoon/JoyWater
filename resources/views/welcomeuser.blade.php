@@ -10,9 +10,9 @@
 <section class="home" id="home">
 
     <div class="content">
-        <h3>adventure is worthwhile</h3>
+        <h3> Joy Water </h3>
         <p>dicover new places with us, adventure awaits</p>
-        <a href="#" class="btn">discover more </a>
+        <a href="#" class="btn"> All Activity  </a>
     </div>
 
     <div class="controls">
