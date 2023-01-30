@@ -38,25 +38,25 @@
 <!-- contact section starts  -->
 {{-- {{dd($key['data']['id'])}} --}}
 
-<section class="book" id="book">
+<section class="book justify-content-center mx-auto" id="book">
 {{-- @foreach ($booking as $item)
      {{dd($item->id)}}
 @endforeach --}}
    
-    <div class="row">
+    <div class="row justify-content-center">
 
         <div class="image">
             {{-- url(../images/rejester.jpg)
             {{URL::asset("images/Waterscooter.gif")}} --}}
-            <img src="{{URL::asset("images/Waterscooter.gif")}}" alt="">
+            {{-- <img src="{{URL::asset("images/Waterscooter.gif")}}" alt=""> --}}
         </div>
 
-        <form action="{{route('user.book.create',$key['data']['id'])}}" method="POST">
+        <form action="{{route('user.book.create',$key['data']['id'])}}" method="POST" class="justify-content-center">
             @method('GET')
             @csrf
 
             <div class="inputBox">
-                <h3>First Name</h3>
+                <h3 >First Name</h3>
                 <input type="text" class="form-control bg-transparent" id="name" placeholder="First Name" name="first_name" value="{{ old('first_name')}}" class="@error('first_name') is-invalid @enderror">
                 <input type="hidden" class="form-control bg-transparent" id="name" placeholder="First Name" name="user_id" value="{{ Auth::user()->id }}">
                 @error('first_name')
