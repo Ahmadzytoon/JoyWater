@@ -47,17 +47,12 @@ section{
 
 .heading span{
   font-size: 3.5rem;
-  background:var(--orange);
+ background-image: linear-gradient(180deg, #0e2a47,#04458f);
   color:var(--light-color);
   border-radius: .5rem;
   padding:.2rem 1rem;
-  cursor: pointer;
 }
-.heading span:hover{
-  color: var(--dark);
-  background-color: var(--secodery-color);
 
-}
 
 .heading span.space{
   background:none;

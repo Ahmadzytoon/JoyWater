@@ -15,6 +15,18 @@
     <link rel="stylesheet" href="/singleCSS/SINGLEmain.css">
     <!-- Template Stylesheet -->
     <link href="/UserSide/cssBook/style.css" rel="stylesheet">
+    <style>
+    .hero-header{
+        background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , url(/images/showMyReserv.jpg) !important;
+ background-position: center center;
+ background-repeat: no-repeat;
+ background-size: cover;
+    }
+ 
+    .bg-dark{
+      background-image: linear-gradient(180deg, #0e2a47,#04458f) !important;
+    }
+ </style>
 @endsection
 
 {{-- ============= showCase =============== --}}
