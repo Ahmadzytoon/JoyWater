@@ -14,7 +14,9 @@ class BookController extends Controller
     public function index($id)
     {
         $data = Activity::findOrfail($id);
-        return view('book',['data'=>$data]);
+
+    $booking=Reservation::where('activity_id',$id);
+        return view('book',['key'=>['data'=>$data ,'booking'=>$booking]]);
     }
 
 

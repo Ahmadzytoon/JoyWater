@@ -36,10 +36,13 @@
 {{--============= contant ===============--}}
 @section('contant')
 <!-- contact section starts  -->
+{{-- {{dd($key['data']['id'])}} --}}
 
 <section class="book" id="book">
-
-
+{{-- @foreach ($booking as $item)
+     {{dd($item->id)}}
+@endforeach --}}
+   
     <div class="row">
 
         <div class="image">
@@ -48,7 +51,7 @@
             <img src="{{URL::asset("images/Waterscooter.gif")}}" alt="">
         </div>
 
-        <form action="{{route('user.book.create',$data->id)}}" method="POST">
+        <form action="{{route('user.book.create',$key['data']['id'])}}" method="POST">
             @method('GET')
             @csrf
 
