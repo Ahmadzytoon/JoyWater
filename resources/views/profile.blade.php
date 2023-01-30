@@ -52,7 +52,7 @@
                       <p class="text-secondary mb-1"> Full Stack Developer </p>
                       <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p> --}}
                       <h4> </h4>
-                      <p class="text-secondary mb-1 mb-0 fw-bold fs-2"> {{auth()->user()->name}} </p>
+                      <p class="text-secondary mb-1 mb-0 fw-bold c"> {{auth()->user()->name}} </p>
                       {{-- <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p> --}}
                     </div>
                   </div>

@@ -33,7 +33,7 @@
 
     </div>
 
-    <h1 class="credit"> created by <span><a href="https://freewebsitecode.com/">Free Website Code</a></span> | all rights reserved! </h1>
+    <h1 class="credit" style="color: #FFC11A"> created by <span><a href="https://freewebsitecode.com/">Free Website Code</a></span> | all rights reserved! </h1>
 
 </section>
 

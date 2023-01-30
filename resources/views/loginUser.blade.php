@@ -23,8 +23,9 @@
             {{-- {{URL::asset("storage/image/".$activitydata->image1)}} --}}
 			<div class="row justify-content-center">
 				<div class="col-md-7 col-lg-5">
-					<div class="wrap">
-						<div class="img" style="background-image: url(/loginn/images/bg-1.jpg);"></div>
+					<div class="wrap border border-primary">
+						<a href="{{route('user.index')}}" class="logo d-flex justify-content-center fw-5 mt-5 "  style="color: black !important; font-size=10rem !important;"><h1  class="border border-primary rounded-pill p-2" style="color: #04448C !important;font-size=10rem !important;">Joy<span style="color: #FFC11A !important;">Water</span></h1></a>
+						{{-- <div class="img" style="background-image: url(/loginn/images/bg-1.jpg);"></div> --}}
 						<div class="login-wrap p-4 p-md-5">
 			      	<div class="d-flex">
 			      		<div class="w-100">
