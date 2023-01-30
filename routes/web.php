@@ -43,6 +43,7 @@ Route::get('/dashboard', function () {
 // });
 Route::middleware(['auth','verified','admin'])->name('admin.')->prefix('admin')->group(function()
 {
+    
 Route::get('/',[AdminController::class,'index'])->name('index');
 Route::resource('/users',UserController::class);
 Route::resource('/activity',ActivityController::class);
@@ -123,5 +124,7 @@ Route::prefix('user')->name('user.')->group(function () {
     
     Route::resource('/myreserve',MyreservController::class);
     });
-
+Route::get('/myResevation/edit', function () {
+    return view('myResevation.edit');
+});
 

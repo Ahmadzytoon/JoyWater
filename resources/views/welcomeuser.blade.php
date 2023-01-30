@@ -16,15 +16,12 @@
     </div>
 
     <div class="controls">
-        <span class="vid-btn active" data-src="images/vid-1.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-2.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-3.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-4.mp4"></span>
-        <span class="vid-btn" data-src="images/vid-5.mp4"></span>
+        <span data-src="images/vid-1.mp4"></span>
+        
     </div>
 
     <div class="video-container">
-        <video src="images/vid-1.mp4" id="video-slider" loop autoplay muted></video>
+        <video src="images/vid-1.mp4"  loop autoplay muted></video>
     </div>
 
 </section>
@@ -166,63 +163,63 @@
     <div class="box-container">
 
         <div class="box">
-            <img src="images/g-1.jpg" alt="">
+            <img src="/images/g-1.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-2.jpg" alt="">
+            <img src="/images/g-2.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-3.jpg" alt="">
+            <img src="/images/g-3.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-4.jpg" alt="">
+            <img src="/images/g-4.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-5.jpg" alt="">
+            <img src="/images/g-5.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-6.jpg" alt="">
+            <img src="/images/g-6.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-7.jpg" alt="">
+            <img src="/images/g-7.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-8.jpg" alt="">
+            <img src="/images/g-8.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>
             </div>
         </div>
         <div class="box">
-            <img src="images/g-9.jpg" alt="">
+            <img src="/images/g-9.jpg" alt="">
             <div class="content">
                 <h3>amazing places</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus, tenetur.</p>

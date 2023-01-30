@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.css">
     <link rel="stylesheet" href="/css/animate.css">
     <link rel="stylesheet" href="/singleCSS/SINGLEmain.css">
+    {{-- bootstrap --}}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <!-- Template Stylesheet -->
     <link href="/UserSide/cssBook/style.css" rel="stylesheet">
 @endsection
@@ -47,29 +50,34 @@
   <div class="col-12">
     <div class="card">
             <div class="card-body table-responsive p-0" style="height: 300px;">
-        <table class="table table-head-fixed text-nowrap">
+        <table class="table table-striped table-head-fixed text-nowrap ">
           <thead>
             <tr>
-              <th>#11</th>
-              <th>Activity Name</th>
+              <th>#</th>
+              <th>Name</th>
+              {{-- <th>last_name</th> --}}
+              <th>Activity</th>
+              <th>Date</th>
               <th>NO.Guest</th>
               <th>Price</th>
               <th>Status</th>
-              <th>Edit</th>
+              <th>User Name</th>
+              <th>Accept</th>
+              <th>Rejected</th>
             </tr>
           </thead>
           <tbody>
               @foreach ($data as $value)
 
               <tr>
-                  <td>{{$value['id']}}</td>
+                  {{-- <td>{{$value['id']}}</td> --}}
                   <td>{{$value['first_name'].$value['last_name']}}</td>
                   {{-- <td>{{$value['last_name']	}}</td> --}}
-                  <td>{{$value['phoneNumber']	}}</td>
-                  <td>{{$value['email']	}}</td>
+                  <td>{{$value['activity']}}</td>
+                  <td>{{$value['price']	}}</td>
+                  {{-- <td>{{$value['last_name']	}}</td> --}}
                   <td>{{$value['res_date']	}}</td>
                   <td>{{$value['number_of_guest']	}}</td>
-                  <td>{{$value['price']	}}</td>
                   @if ($value['status']=="Pending")
                   <td><span class="badge bg-warning">Pending</span></td>
                   @endif
@@ -82,24 +90,18 @@
                   <td><span class="badge bg-danger">Rejected</span></td>
 
                   @endif
-                  <td>{{$value['activity']}}</td>
-                  <td>{{$value['user']}}</td>
+                  {{-- <td>{{$value['user']}}</td> --}}
 
+                  <td><a href="{{Route('user.myreserve.edit',$value['id'])}}"><button type="button" class="btn btn-block bg-gradient-success btn-sm">Edit</button>
+                  </a></td>
                   <td>
-                      <form action="{{Route('admin.reservation.update',$value['id'])}}" method="POST">
-                          @method('PUT')
-                          {{-- Pending --}}
-                          @csrf
-                          <button type="submit" class="btn btn-block  bg-success btn-sm">Accept</button>
-                      </form>
-                  </td>
               
                 <td>
-                <form action="{{Route('admin.reservation.destroy',$value['id'])}}" method="POST">
-                  @method('delete')
+                <form action="{{url('user/myreserve/destroy',$value['id'])}}" method="POST">
+                  @method('DELETE')
                   {{-- Pending --}}
                   @csrf
-                  <button type="submit" class="btn btn-block bg-gradient-danger btn-sm">Rejected</button>
+                  {{-- <button type="submit" class="btn btn-block bg-gradient-danger btn-sm">Rejected</button> --}}
               </form>
                 </td>
               </tr>

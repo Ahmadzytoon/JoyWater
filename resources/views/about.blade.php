@@ -46,7 +46,9 @@ About Us
                             <span>o</span>
                             <span>u</span>
                             <span>t</span>
-                            <span>&nbsp;</span>
+                            <span class="space"></span>
+
+                            {{-- <span>&nbsp;</span> --}}
                             <span>U</span>
                             <span>s</span>
 
