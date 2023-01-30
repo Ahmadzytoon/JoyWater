@@ -26,7 +26,8 @@ return new class extends Migration
 
             $table->string('status')->default('Pending');
             $table->integer('number_of_guest');
-            $table->dateTime('res_date');
+            $table->date('res_date');
+            $table->string('time');
             $table->decimal('price');
             $table->softDeletes();
             $table->timestamps();

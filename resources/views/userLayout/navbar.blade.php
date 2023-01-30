@@ -44,11 +44,17 @@
         </ul>
       </div> --}}
 
-    <form action="" class="search-bar-container">
+    {{-- <form action="" class="search-bar-container">
         <input type="search" id="search-bar" placeholder="search here...">
         <label for="search-bar" class="fas fa-search"></label>
-    </form>
+    </form> --}}
+    <form action="{{ route('user.search') }}" method="post" class="search-bar-container">
 
+        @csrf
+        <input type="text" name="search" id="search-bar" placeholder="search here...">
+
+       <button type="submit"><i style="font-size: 30px; margin=10px" class="fas fa-search"></li></button>
+    </form>
 </header>
 
 <!-- login form container  -->

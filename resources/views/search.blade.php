@@ -36,7 +36,7 @@
     <div class="box-container">
 
 
-        @foreach ($data as $activitydata)
+        @foreach ($results as $activitydata)
             
         <div class="box">
 
