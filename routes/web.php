@@ -123,5 +123,7 @@ Route::prefix('user')->name('user.')->group(function () {
     
     Route::resource('/myreserve',MyreservController::class);
     });
-
+Route::get('/myResevation/edit', function () {
+    return view('myResevation.edit');
+});
 

@@ -59,47 +59,25 @@
             </tr>
           </thead>
           <tbody>
-                   <td>
-                      <form action="{{url('user/myreserve/update',$value->$id)}}" method="POST" enctype="multipart/form-data">
+                  {{-- @foreach ($reservation as $data) --}}
+                      
+                 
+                      <form action="{{url('user/myreserve/update',$data->$id)}}" method="POST">
                           @method('PUT')
                           @csrf
-                          <input type="text" name="first_name" class="form-control" id="" placeholder="" value="{{$data->name}}">
-                          <input type="text" name="last_name" class="form-control" id="" placeholder="" value="{{$data->name}}">
-                          <input type="text" name="phoneNumber" class="form-control" id="" placeholder="" value="{{$data->name}}">
-                          <input type="email" name="email" class="form-control" id="" placeholder="" value="{{$data->name}}">
-                          <input type="text" name="number_of_guest" class="form-control" id="" placeholder="" value="{{$data->name}}">
-
-                            @if ($value['status']=="Pending")
-                            <td><span class="badge bg-warning">Pending</span></td>
-                            @endif
-
-                            @if ($value['status']	=="Accepted")
-                            <td><span class="badge bg-success">Accepted</span></td>
-
-                            @endif     
-                            @if ($value['status']	=="Rejected")
-                            <td><span class="badge bg-danger">Rejected</span></td>
-
-                            @endif
-
-                          <input type="text" name="res_date" class="form-control" id="" placeholder="" value="{{$data->name}}">
-                          <input type="text" name="activity" class="form-control" id="" placeholder="" value="{{$data->name}}">
-                          <input type="text" name="user" class="form-control" id="" placeholder="" value="{{$data->name}}">
+                          <input type="text" name="first_name" class="form-control" id="" placeholder="" >
+                          <input type="text" name="last_name" class="form-control" id="" placeholder="" >
+                          <input type="number" name="phoneNumber" class="form-control" id="" placeholder="">
+                          <input type="email" name="email" class="form-control" id="" placeholder="" >
+                          <input type="number" name="number_of_guest" class="form-control" id="" placeholder="">
+                          <input type="date" name="res_date" class="form-control" id="" placeholder="" >
+                          <input type="text" name="activity" class="form-control" id="" placeholder="" >
+                          {{-- <input type="text" name="user" class="form-control" id="" placeholder="" value="{{$data->name}}"> --}}
                           
-                          {{-- <button type="submit" class="btn btn-block  bg-success btn-sm">Edit</button> --}}
+                          <button type="submit" class="btn btn-block  bg-success btn-sm">Save</button>
                       </form>
-                  </td>
-              
-                <td>
-                <form action="{{url('user/myreserve/update',$value['id'])}}" method="POST">
-                  @method('delete')
-                  {{-- Pending --}}
-                  @csrf
-                  <button type="submit" class="btn btn-block bg-gradient-danger btn-sm">Rejected</button>
-              </form>
-                </td>
-              </tr>
-              @endforeach
+                  
+              {{-- @endforeach --}}
 
           </tbody>
         </table>
