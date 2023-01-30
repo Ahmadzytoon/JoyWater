@@ -91,11 +91,11 @@
 
               <tr class="fs-3 align-items-center align-middle ">
                   {{-- <td>{{$value['id']}}</td> --}}
-                  <td class="pt-3">{{$value['first_name'].$value['last_name']}}</td>
+                  <td>{{$value['first_name'].$value['last_name']}}</td>
                   {{-- <td>{{$value['last_name']	}}</td> --}}
                   <td>{{$value['activity']}}</td>
                   <td>{{$value['res_date']	}}</td>
-                  {{-- <td>{{$value['time']	}}</td> --}}
+                  <td>{{$value['time']	}}</td>
                   <td>{{$value['number_of_guest']	}}</td>
                   <td>{{$value['price']	}}</td>
                   {{-- <td>{{$value['last_name']	}}</td> --}}
@@ -111,7 +111,6 @@
                   <td><span class="badge bg-danger">Rejected</span></td>
 
                   @endif
-                  {{-- <td>{{$value['user']}}</td> --}}
 
                   <td><a href="{{Route('user.myreserve.edit',$value['id'])}}"><button type="button" class="btn btn-block bg-success bg-gradient btn-sm fs-3 align-middle">Edit</button>
                   </a></td>

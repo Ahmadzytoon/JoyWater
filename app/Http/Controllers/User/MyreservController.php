@@ -24,14 +24,13 @@ class MyreservController extends Controller
              'id' => $reservation->id,
              'first_name' => $reservation->first_name,
              'last_name' => $reservation->last_name,
-             // 'phoneNumber' => $reservation->phoneNumber,
-             // 'email'=>$reservation->email,
+           
              'number_of_guest' => $reservation->number_of_guest,
              'res_date' => $reservation->res_date,
+             'time' => $reservation->time,
              'price' => $reservation->price,
              'status' => $reservation->status,
              'activity' => isset($reservation->activity) ? $reservation->activity->name : "",
-             // 'user' => isset($reservation->user) ? $reservation->user->name : "",
        ];}
          return view('myReservation.index',['data'=>$data]);
     }

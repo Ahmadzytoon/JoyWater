@@ -35,27 +35,27 @@
 <div  id="home">
 
 <div class="container">
-    <div class="main-body">
-        <div style="margin-bottom:100px !important;" class="row">
-            <div class="col-lg-4">
+    <div class="main-body ">
+        <div style="margin-bottom:100px !important;" class="row align-items-center justify-content-center">
+            <div class="col-lg-4 mb-3">
                 <div class="card">
                     <div class="card-body">
                         <div class="d-flex flex-column align-items-center text-center">
-                            <img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">
+                            <img src="https://bootdey.com/img/Content/avatar/avatar7.png" alt="Admin" class="rounded-circle p-1 bg-primary" >
                             <div class="mt-3">
-                                <h4>John Doe</h4>
-                                <p class="text-secondary mb-1">Full Stack Developer</p>
-                                <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p>
+                                <h4 class="fw-bold fs-2" >{{auth()->user()->name}}</h4>
+                                {{-- <p class="text-secondary mb-1">Full Stack Developer</p>
+                                <p class="text-muted font-size-sm">Bay Area, San Francisco, CA</p> --}}
                                 {{-- <button class="btn btn-primary">Follow</button> --}}
                                 {{-- <button class="btn btn-outline-primary">Message</button> --}}
                             </div>
                         </div>
-                        <hr class="my-4">
-                       
+                        {{-- <hr class="my-4"> --}}
+
                     </div>
                 </div>
             </div>
-            <div class="col-lg-8">
+            <div class="col-lg-6 ">
                 <div class="card">
                     <div class="card-body">
 
@@ -67,26 +67,26 @@
                         @csrf
                         <div class="row mb-3">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Full Name</h6>
+                                <h6 class="mb-0 fw-bold fs-2">Full Name</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" name="name" class="form-control" value="{{auth()->user()->name}}">
+                                <input type="text" name="name" class="form-control col-sm-9 text-secondary fs-3" value="{{auth()->user()->name}}">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Email</h6>
+                                <h6 class="mb-0 fw-bold fs-2">Email</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" name="email" class="form-control" value="{{auth()->user()->email}}">
+                                <input type="text" name="email" class="form-control col-sm-9 text-secondary fs-3"  value="{{auth()->user()->email}}">
                             </div>
                         </div>
                         <div class="row mb-3">
                             <div class="col-sm-3">
-                                <h6 class="mb-0">Phone</h6>
+                                <h6 class="mb-0 fw-bold fs-2">Phone</h6>
                             </div>
                             <div class="col-sm-9 text-secondary">
-                                <input type="text" name="phone" class="form-control" value="{{auth()->user()->phone}}">
+                                <input type="text" name="phone" class="form-control col-sm-9 text-secondary fs-3"  value="{{auth()->user()->phone}}">
                             </div>
                         </div>
                        

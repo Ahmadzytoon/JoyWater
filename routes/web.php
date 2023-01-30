@@ -43,7 +43,7 @@ Route::get('/dashboard', function () {
 // });
 Route::middleware(['auth','verified','admin'])->name('admin.')->prefix('admin')->group(function()
 {
-    
+
 Route::get('/',[AdminController::class,'index'])->name('index');
 Route::resource('/users',UserController::class);
 Route::resource('/activity',ActivityController::class);
@@ -102,7 +102,7 @@ Route::prefix('user')->name('user.')->group(function () {
     })->name('contact');
     
     Route::resource('/signup',RegisterUserController::class);
-    // Route::post('/search' , [Search::class , 'search'])->name('search');
+    Route::post('/search' , [Search::class , 'search'])->name('search');
 
 
     Route::get('/login',[LoginUserController::class,'index'])->name('login');
@@ -113,7 +113,7 @@ Route::prefix('user')->name('user.')->group(function () {
     // Route::resource('/profile/edit',ProfileUserController::class);
 
     
-    Route::get('/search',[Search::class , 'search']);
+    // Route::get('/search',[Search::class , 'search']);
 
     
     Route::get('/activity_details/{id}',[ActivityDetailsController::class,'index'])->name('activity.details');
