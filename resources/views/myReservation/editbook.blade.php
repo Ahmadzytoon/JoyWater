@@ -45,7 +45,11 @@
    
     <div class="row">
 
-       
+        <div class="image">
+            {{-- url(../images/rejester.jpg)
+            {{URL::asset("images/Waterscooter.gif")}} --}}
+            <img src="{{URL::asset("images/Waterscooter.gif")}}" alt="">
+        </div>
 
         <form action="{{Route('user.myreserve.update',$value['id'])}}" method="POST">
             @method('GET')

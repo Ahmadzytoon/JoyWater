@@ -5,7 +5,19 @@
 @section('css')
    {{-- <link href="UserSide/cssprofile/profile.css" rel="stylesheet">   --}}
   <link href="UserSide/cssProfil/cssprofile/style.css" rel="stylesheet"> 
-  
+  <style>
+    .hero-header{
+background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , url(/images/showMyReserv1.jpg);
+background-position: center center;
+background-repeat: no-repeat;
+background-size: cover;
+   }
+
+   .bg-dark{
+     background-image: linear-gradient(180deg, #0e2a47,#04458f) !important;
+   }
+</style>
+
 @endsection
 @section('showCase')  
 <div class="container-fluid position-relative p-0">

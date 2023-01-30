@@ -2,7 +2,7 @@
 
     <div id="menu-bar" class="fas fa-bars"></div>
 
-    <a href="#" class="logo"><span style="color: #04448C">Joy</span><span style="color: #FFC11A !important;"> Water</span></a>
+    <a href="#" class="logo"><span style="color: #04448C ; background-color:aliceblue;border-radius: 10rem; padding-left:.9rem; padding-right:.7rem;">Joy</span><span style="color: #FFC11A !important;"> Water</span></a>
 
     <nav class="navbar">
         <a href="{{route('user.index')}}">home</a>
@@ -53,7 +53,7 @@
         @csrf
         <input type="text" name="search" id="search-bar" placeholder="search here...">
 
-       <button type="submit"><i style="font-size: 30px; margin=10px" class="fas fa-search"></li></button>
+       {{-- <button type="submit"><i style="font-size: 30px; margin=10px" class="fas fa-search"></li></button> --}}
     </form>
 </header>
 
