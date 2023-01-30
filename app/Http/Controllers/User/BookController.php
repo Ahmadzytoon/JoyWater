@@ -34,6 +34,9 @@ class BookController extends Controller
             'email' => ['required', 'string', 'email', 'max:255'],
             'phoneNumber' => ['required', 'max:10'],
             'res_date' => ['required'],
+            'time' => ['required'],
+
+
         ]);
         
         
@@ -55,11 +58,12 @@ class BookController extends Controller
             'price' =>   $price,
             'status' => 'Pending',
             'activity_id' => $id,
+            'time' =>$request->time,
 
 
         ]);
 
-        return response('ok');
+        return redirect()->route('user.profile.index');
 
     }
 }

@@ -104,6 +104,25 @@
 
                 
             </div>
+            {{-- ________________________ --}}
+            <div class="inputBox">
+
+
+                <h3>Hour</h3>
+                <select name="time" id="cars">
+                    <option value="10">10:00:am</option>
+                    <option value="11">11:00:am</option>
+                    <option value="12">12:00:am</option>
+                    <option value="13">1:00:pm</option>
+                    <option value="14">2:00:pm</option>
+                    <option value="15">3:00:pm</option>
+                    <option value="16">4:00:pm</option>
+                    <option value="13">5:00:pm</option>
+                  </select>
+
+            </div>
+            {{-- _____________________________ --}}
+
             <div class="inputBox">
 
 

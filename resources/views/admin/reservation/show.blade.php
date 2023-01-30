@@ -59,6 +59,7 @@ Reservation
               <th>Phone</th>
               <th>Email</th>
               <th>Date</th>
+              <th>time</th>
               <th>NO.Guest</th>
               <th>Price</th>
               <th>Status</th>
@@ -78,6 +79,7 @@ Reservation
                   <td>{{$value['phoneNumber']	}}</td>
                   <td>{{$value['email']	}}</td>
                   <td>{{$value['res_date']	}}</td>
+                  <td>{{$value['time']}}</td>
                   <td>{{$value['number_of_guest']	}}</td>
                   <td>{{$value['price']	}}</td>
                   @if ($value['status']=="Pending")
