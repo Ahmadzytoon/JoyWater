@@ -48,7 +48,7 @@
         <div class="image">
             {{-- url(../images/rejester.jpg)
             {{URL::asset("images/Waterscooter.gif")}} --}}
-            {{-- <img src="{{URL::asset("images/Waterscooter.gif")}}" alt=""> --}}
+            <img src="{{URL::asset("images/Waterscooter.gif")}}" alt="">
         </div>
 
         <form action="{{route('user.book.create',$key['data']['id'])}}" method="POST" class="justify-content-center">
