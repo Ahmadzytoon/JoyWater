@@ -46,7 +46,9 @@
                             <span>a</span>
                             <span>c</span>
                             <span>t</span>
-                            <span>&nbsp;</span>
+                        <span class="space"></span>
+
+                            {{-- <span>&nbsp;</span> --}}
                             <span>u</span>
                             <span>s</span>
                         </h1>

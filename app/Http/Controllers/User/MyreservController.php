@@ -16,8 +16,24 @@ class MyreservController extends Controller
      */
     public function index()
     {
-        $data = Reservation::all();
-        return view('myReservation.index',['data'=>$data]);
+        $id= auth()->user()->id;
+        $reserv = Reservation::where('user_id',$id)->get();
+         $data=[] ;
+         foreach ($reserv as $reservation){
+       $data[]=[
+             'id' => $reservation->id,
+             'first_name' => $reservation->first_name,
+             'last_name' => $reservation->last_name,
+             // 'phoneNumber' => $reservation->phoneNumber,
+             // 'email'=>$reservation->email,
+             'number_of_guest' => $reservation->number_of_guest,
+             'res_date' => $reservation->res_date,
+             'price' => $reservation->price,
+             'status' => $reservation->status,
+             'activity' => isset($reservation->activity) ? $reservation->activity->name : "",
+             // 'user' => isset($reservation->user) ? $reservation->user->name : "",
+       ];}
+         return view('myReservation.index',['data'=>$data]);
     }
 
     /**
@@ -49,8 +65,23 @@ class MyreservController extends Controller
      */
     public function show($id)
     {
-        //
-    }
+    //     $reservation = Reservation::where('user_id',$id)->get();
+    //    $id= auth()->user()->id;
+    //     $data[] = [
+    //         'id' => $reservation->id,
+    //         'first_name' => $reservation->first_name,
+    //         'last_name' => $reservation->last_name,
+    //         // 'phoneNumber' => $reservation->phoneNumber,
+    //         // 'email'=>$reservation->email,
+    //         'number_of_guest' => $reservation->number_of_guest,
+    //         'res_date' => $reservation->res_date,
+    //         'price' => $reservation->price,
+    //         'status' => $reservation->status,
+    //         'activity' => isset($reservation->activity) ? $reservation->activity->name : "",
+    //         // 'user' => isset($reservation->user) ? $reservation->user->name : "",
+    //     ];
+    //     return view('myReservation.index',['data'=>$data]);
+     }
 
     /**
      * Show the form for editing the specified resource.
@@ -60,7 +91,8 @@ class MyreservController extends Controller
      */
     public function edit($id)
     {
-        //
+        // $reservation = Reservation::where('id', $id)->get();
+        // return view('myReservation.edit',['reservation' => $reservation]);
     }
 
     /**
@@ -72,7 +104,7 @@ class MyreservController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        
     }
 
     /**
