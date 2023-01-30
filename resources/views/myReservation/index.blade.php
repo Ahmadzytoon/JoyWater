@@ -91,7 +91,7 @@
 
               <tr class="fs-3 align-items-center align-middle ">
                   {{-- <td>{{$value['id']}}</td> --}}
-                  <td>{{$value['first_name'].$value['last_name']}}</td>
+                  <td>{{$value['first_name']." ".$value['last_name']}}</td>
                   {{-- <td>{{$value['last_name']	}}</td> --}}
                   <td>{{$value['activity']}}</td>
                   <td>{{$value['res_date']	}}</td>
@@ -117,9 +117,11 @@
                   
               
                 <td>
-                <form action="{{url('user/myreserve/destroy',$value['id'])}}" method="POST" class=""> <button type="button" class="btn btn-block bg-gradient bg-danger btn-sm fs-3 align-middle">Delete</button>
+                <form action="{{Route('user.myreserve.destroy',$value['id'])}}" method="POST" class=""> 
                   @method('DELETE')
                   @csrf
+                  <button type="submit" class="btn btn-block bg-gradient bg-danger btn-sm fs-3 align-middle">Delete</button>
+
               </form>
                 </td>
               </tr>

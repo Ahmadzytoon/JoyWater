@@ -114,6 +114,7 @@ class MyreservController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Reservation::findOrfail($id)->delete();
+        return redirect()->route('user.myreserve.index'); 
     }
 }
