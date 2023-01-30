@@ -42,7 +42,7 @@ section{
 
 .heading{
   text-align: center;
-  padding:2.5rem 0
+  /* padding:2.5rem 0 */
 }
 
 .heading span{
@@ -687,7 +687,7 @@ header .search-bar-container label:hover{
   }
 
   section{
-    padding:2rem;
+    /* padding:2rem; */
   }
 
 }
