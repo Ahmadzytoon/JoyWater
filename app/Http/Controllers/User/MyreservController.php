@@ -90,8 +90,8 @@ class MyreservController extends Controller
      */
     public function edit($id)
     {
-        // $reservation = Reservation::where('id', $id)->get();
-        // return view('myReservation.edit',['reservation' => $reservation]);
+        $reservation = Reservation::where('id', $id)->get();
+        return view('myReservation.edit',['reservation' => $reservation]);
     }
 
     /**
@@ -103,8 +103,16 @@ class MyreservController extends Controller
      */
     public function update(Request $request, $id)
     {
-        
-    }
+        $data = Reservation::findOrfail($id);
+
+        $data->status ="";
+        $data->status ="Accepted";
+        $data->status ="Accepted";
+        $data->status ="Accepted";
+        $data->status ="Accepted";
+
+        $data->save();
+        return redirect()->route('user.myreserve.index');     }
 
     /**
      * Remove the specified resource from storage.

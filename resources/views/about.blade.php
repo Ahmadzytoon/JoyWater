@@ -29,13 +29,25 @@ About Us
  
      <!-- Template Stylesheet -->
      <link href="/UserSide/cssAbout/style.css" rel="stylesheet">
+     <style>
+        .hero-header{
+background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , url(/images/showMyReserv1.jpg);
+   background-position: center center;
+   background-repeat: no-repeat;
+   background-size: cover;
+       }
+
+       .bg-dark{
+         background-image: linear-gradient(180deg, #0e2a47,#04458f) !important;
+       }
+   </style>
 
 @endsection
 
 
 @section('showCase')  
 <div class="container-fluid position-relative p-0">
-    <div class="container-fluid bg-primary py-5 mb-5 hero-header">
+    <div class="container-fluid py-5 mb-5 hero-header">
         <div class="container py-5">
             <div class="row justify-content-center py-5">
                 <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">

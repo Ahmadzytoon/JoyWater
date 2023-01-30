@@ -49,20 +49,14 @@
             <div class="card-body table-responsive p-0" style="height: 300px;">
         <table class="table table-head-fixed text-nowrap">
           <thead>
-            <tr>
-              <th>Activity Name</th>
-              <th>Activity Name</th>
-              <th>NO.Guest</th>
-              <th>Price</th>
-              <th>Status</th>
-              <th>Edit</th>
-            </tr>
+         
           </thead>
           <tbody>
-                  {{-- @foreach ($reservation as $data) --}}
+            {{-- reservation --}}
+                  @foreach ($reservation as $data)
                       
                  
-                      <form action="{{url('user/myreserve/update',$data->$id)}}" method="POST">
+                      <form action="{{Route('user.myreserve.update',$value['id'])}}" method="POST">
                           @method('PUT')
                           @csrf
                           <input type="text" name="first_name" class="form-control" id="" placeholder="" >
@@ -71,13 +65,28 @@
                           <input type="email" name="email" class="form-control" id="" placeholder="" >
                           <input type="number" name="number_of_guest" class="form-control" id="" placeholder="">
                           <input type="date" name="res_date" class="form-control" id="" placeholder="" >
-                          <input type="text" name="activity" class="form-control" id="" placeholder="" >
+
+                          <div class="inputBox">
+                            <h3>Hour</h3>
+                            <select name="time" id="cars">
+                               <option value="10">10:00:am</option>
+                                <option value="11">11:00:am</option>
+                                <option value="12">12:00:am</option>
+                                <option value="13">1:00:pm</option>
+                                <option value="14">2:00:pm</option>
+                                <option value="15">3:00:pm</option>
+                                <option value="16">4:00:pm</option>
+                                <option value="13">5:00:pm</option>
+                              </select>
+                        </div>
+
+                          {{-- <input type="text" name="activity" class="form-control" id="" placeholder="" > --}}
                           {{-- <input type="text" name="user" class="form-control" id="" placeholder="" value="{{$data->name}}"> --}}
                           
                           <button type="submit" class="btn btn-block  bg-success btn-sm">Save</button>
                       </form>
                   
-              {{-- @endforeach --}}
+              @endforeach
 
           </tbody>
         </table>
