@@ -70,14 +70,12 @@
               @foreach ($data as $value)
 
               <tr>
-                  {{-- <td>{{$value['id']}}</td> --}}
-                  <td>{{$value['first_name'].$value['last_name']}}</td>
-                  {{-- <td>{{$value['last_name']	}}</td> --}}
+                <td>{{$value['id']}}</td>
+                  <td>{{$value['first_name']." ".$value['last_name']}}</td>
                   <td>{{$value['activity']}}</td>
                   <td>{{$value['price']	}}</td>
-                  {{-- <td>{{$value['last_name']	}}</td> --}}
                   <td>{{$value['res_date']	}}</td>
-                  <td>{{$value['time']	}}</td>
+                  <td>{{$value['time']	}}:00</td>
                   <td>{{$value['number_of_guest']	}}</td>
                   @if ($value['status']=="Pending")
                   <td><span class="badge bg-warning">Pending</span></td>
@@ -91,7 +89,6 @@
                   <td><span class="badge bg-danger">Rejected</span></td>
 
                   @endif
-                  {{-- <td>{{$value['user']}}</td> --}}
 
                   <td><a href="{{Route('user.myreserve.edit',$value['id'])}}"><button type="button" class="btn btn-block bg-gradient-success btn-sm">Edit</button>
                   </a></td>
