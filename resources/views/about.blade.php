@@ -137,11 +137,11 @@ background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , u
                             <div  style="margin-top: -40px" class="col-lg-10 wow fadeInUp" data-wow-delay="0.3s ">
                                 <h6 style="font-size:25px !important" class="section-title bg-white text-start text-primary pe-3">About Us</h6>
                                 <h1  style=" padding-top:30px font-size:30px !important"class="mb-4">Welcome to <span class="text-primary">Tourist</span></h1>
-                                <p style="font-size:15px !important" class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit.</p>
-                                <p style="font-size:15px !important"class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                                <p style="font-size:15px !important" class="mb-4">the standard state is most often defined as pure water at the same temperature. Using this particular definition, pure distilled water has a water activity of exactly one.</p>
+                                <p style="font-size:15px !important"class="mb-4"></p>
                                 <div class="row gy-2 gx-4 mb-4">
                                     <div class="col-sm-10">
-                                        <p style="font-size:16px !important" class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class Flights</p>
+                                        <p style="font-size:16px !important" class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>First Class </p>
                                     </div>
                                     <div class="col-sm-6">
                                         <p style="font-size:16px !important" class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Handpicked Hotels</p>
@@ -150,10 +150,10 @@ background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , u
                                         <p style="font-size:16px !important" class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>5 Star Accommodations</p>
                                     </div>
                                     <div class="col-sm-6">
-                                        <p  style="font-size:16px !important" class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Latest Model Vehicles</p>
+                                        <p  style="font-size:16px !important" class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>Safty</p>
                                     </div>
                                     <div class="col-sm-6">
-                                        <p style="font-size:16px !important" class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>150 Premium City Tours</p>
+                                        <p style="font-size:16px !important" class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>sunshin</p>
                                     </div>
                                     {{-- <div class="col-sm-6">
                                         <p style="font-size:18px !important" class="mb-0"><i class="fa fa-arrow-right text-primary me-2"></i>24/7 Service</p>
@@ -217,8 +217,8 @@ background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , u
             <div class="row g-5 justify-content-center" >
                 <div class="col-lg-3 col-md-4 wow fadeInUp m-5 " data-wow-delay="0.1s">
                     <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid rounded" src="../images/people4.jpeg" alt="" >
+                        <div class="overflow-hidden " style="height:300px;">
+                            <img class="img-fluid rounded" src="../images/israa.jpg" alt="">
                         </div>
                         <div class="text-center p-4">
                             <h5  style="font-size:20px;"class="mb-0">first & last Name</h5>
@@ -229,8 +229,8 @@ background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , u
                 
                 <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
                     <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid rounded" src="../images/people3.jpeg" alt="" >
+                        <div class="overflow-hidden" style="height:300px;">
+                            <img class="img-fluid rounded" src="../images/shimaa.jpg" alt="" height="300px" >
                         </div>
                         <div class="text-center p-4">
                             <h5 style="font-size:20px;" class="mb-0">first & last Name</h5>
@@ -241,8 +241,8 @@ background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , u
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
                     <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid rounded" src="../images/people2.jpg" alt="" >
+                        <div class="overflow-hidden" style="height:300px;">
+                            <img class="img-fluid rounded" src="../images/people2.jpg" alt="" height="300px" >
                         </div>
                         <div class="text-center p-4">
                             <h5 style="font-size:20px;" class="mb-0">first & last Name</h5>
@@ -254,8 +254,8 @@ background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , u
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
                     <div class="team-item">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid rounded" src="../images/people1.jpeg" alt="" >
+                        <div class="overflow-hidden"style="height:300px;">
+                            <img class="img-fluid rounded" src="../images/ahmad.jpeg" alt="" >
                         </div>
                         <div class="text-center p-4">
                             <h5 style="font-size:20px;" class="mb-0">first & last Name</h5>
@@ -266,7 +266,7 @@ background: linear-gradient(to bottom,#00336d,#00336d00,#ffffff9d ,#ffffff)  , u
 
                 <div class="col-lg-3 col-md-6 wow fadeInUp m-5" data-wow-delay="0.1s">
                     <div class="team-item">
-                        <div class="overflow-hidden">
+                        <div class="overflow-hidden" style="height:300px;">
                             <img class="img-fluid rounded" src="../img/team-1.jpg" alt="" >
                         </div>
                         <div class="text-center p-4">
