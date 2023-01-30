@@ -58,10 +58,10 @@
               {{-- <th>last_name</th> --}}
               <th>Activity</th>
               <th>Date</th>
+              <th>Time</th>
               <th>NO.Guest</th>
               <th>Price</th>
               <th>Status</th>
-              <th>User Name</th>
               <th>Accept</th>
               <th>Rejected</th>
             </tr>
@@ -77,6 +77,7 @@
                   <td>{{$value['price']	}}</td>
                   {{-- <td>{{$value['last_name']	}}</td> --}}
                   <td>{{$value['res_date']	}}</td>
+                  <td>{{$value['time']	}}</td>
                   <td>{{$value['number_of_guest']	}}</td>
                   @if ($value['status']=="Pending")
                   <td><span class="badge bg-warning">Pending</span></td>

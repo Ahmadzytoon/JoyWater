@@ -31,6 +31,8 @@ class ReservationController extends Controller
                 'status' => $reservation->status,
                 'activity' => isset($reservation->activity) ? $reservation->activity->name : "",
                 'user' => isset($reservation->user) ? $reservation->user->name : "",
+                'time' => $reservation->time,
+                
             ];
 
 
